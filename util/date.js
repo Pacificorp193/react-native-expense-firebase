@@ -1,7 +1,7 @@
 export function getFormattedDate(date) {
-  return date.toISOString().slice(0, 10);
+  return date.toLocaleDateString();
 }
 
 export function getDateMinusDays(date, days) {
-  return new Date(date.getFullYear(), date.getMonth(), date.getDate() - days);
+  return new Date(date.getMonth(), date.getDate(), date.getFullYear() - days);
 }
